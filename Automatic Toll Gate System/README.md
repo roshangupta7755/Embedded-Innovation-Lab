@@ -1,211 +1,200 @@
 <div align="center">
 
-# ⚡ Automatic Toll Gate System
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00C9FF,100:92FE9D&height=200&section=header&text=Automatic%20Toll%20Gate%20System&fontSize=36&fontColor=ffffff&fontAlignY=38&desc=Embedded%20Systems%20%7C%20Arduino%20%7C%20Real-Time%20Automation&descSize=16&descAlignY=58&animation=fadeIn" width="100%"/>
 
-### *Smart Infrastructure. Zero Delays. Pure Automation.*
+<br/>
 
-[![Arduino](https://img.shields.io/badge/Platform-Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)](https://www.arduino.cc/)
-[![C++](https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://isocpp.org/)
-[![Embedded Systems](https://img.shields.io/badge/Domain-Embedded%20Systems-FF6F00?style=for-the-badge&logo=embeddedartistry&logoColor=white)](https://en.wikipedia.org/wiki/Embedded_system)
-[![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)](https://github.com/)
+[![Arduino](https://img.shields.io/badge/Platform-Arduino_Uno-00979D?style=for-the-badge&logo=arduino&logoColor=white)](https://www.arduino.cc/)
+[![Language](https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://isocpp.org/)
+[![Domain](https://img.shields.io/badge/Domain-Embedded_Systems-FF6F00?style=for-the-badge)](https://en.wikipedia.org/wiki/Embedded_system)
+[![Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
-> **Automating toll collection through real-time vehicle detection, servo-controlled gate actuation, and LED-based visual signaling — built entirely on Arduino.**
+<br/>
+
+> **A hardware-driven toll gate automation system leveraging ultrasonic sensing, servo actuation, and LED signaling — engineered on Arduino Uno.**
+
+<br/>
 
 </div>
 
 ---
 
-## 📌 Table of Contents
+<div align="center">
 
-- [Why This Project Matters](#-why-this-project-matters)
-- [Highlights](#-highlights)
-- [Features](#-features)
-- [System Architecture](#-system-architecture)
-- [How It Works](#-how-it-works)
-- [Components Used](#-components-used)
-- [Circuit Overview](#-circuit-overview)
-- [Code Structure](#-code-structure)
-- [Project Images](#-project-images)
-- [Demo](#-demo--preview)
-- [Learning Outcomes](#-learning-outcomes)
-- [Future Scope](#-future-scope)
-- [Connect](#-connect)
+### `[ Detection ]` → `[ Processing ]` → `[ Gate Control ]` → `[ Visual Signal ]`
+
+</div>
 
 ---
 
-## 💡 Why This Project Matters
+## 📡 Overview
 
-Manual toll collection is a bottleneck in modern transportation — causing traffic congestion, human error, and inefficiency. This project presents a **low-cost, hardware-driven automation solution** that can:
+The **Automatic Toll Gate System** is a real-time embedded solution designed to eliminate manual toll operation. When a vehicle enters the detection zone, the ultrasonic sensor captures proximity data, the Arduino processes the signal, and the servo motor actuates the gate — all within milliseconds. LED indicators provide instant visual feedback.
 
-- Eliminate the need for manual gate operators
-- Reduce vehicle wait times at toll plazas
-- Serve as a foundation for **RFID or IoT-integrated smart toll systems**
-- Demonstrate real-world embedded systems thinking at the intersection of hardware and software
-
-Whether you're a student, a maker, or a recruiter — this project showcases practical engineering that solves a genuine infrastructure problem.
+This project demonstrates the complete hardware-software integration cycle: from raw sensor data to a physical, real-world mechanical response.
 
 ---
 
 ## 🚀 Highlights
 
-- 🔴 **Real-time detection** using HC-SR04 Ultrasonic Sensor
-- 🔁 **Automated gate control** via SG90 Servo Motor
-- 🟢 **Dual LED signaling** for visual vehicle status feedback
-- ⚡ **Instant actuation** — gate opens/closes within milliseconds of detection
-- 🧠 **Pure Arduino logic** — no external libraries, no black boxes
-- 🔌 **Fully breadboard-compatible** — easy to build and prototype
+<table>
+<tr>
+<td>⚡</td>
+<td><strong>Instant Detection</strong></td>
+<td>HC-SR04 ultrasonic sensor detects vehicles within a configurable distance threshold</td>
+</tr>
+<tr>
+<td>🔄</td>
+<td><strong>Auto Gate Actuation</strong></td>
+<td>SG90 servo rotates 90° to open / 0° to close with millisecond precision</td>
+</tr>
+<tr>
+<td>🟢</td>
+<td><strong>Dual LED Signaling</strong></td>
+<td>Green LED for gate-open state, Red LED for gate-closed state</td>
+</tr>
+<tr>
+<td>⏱️</td>
+<td><strong>Timed Auto-Close</strong></td>
+<td>Gate remains open for a configurable duration, then closes automatically</td>
+</tr>
+<tr>
+<td>🔁</td>
+<td><strong>Continuous Loop</strong></td>
+<td>Real-time polling loop — no manual resets or interrupts required</td>
+</tr>
+<tr>
+<td>🔌</td>
+<td><strong>Prototype-Ready</strong></td>
+<td>Fully breadboard-compatible; buildable in under 30 minutes</td>
+</tr>
+</table>
 
 ---
 
-## ✨ Features
+## 🧰 Tech Stack
 
-| Feature | Description |
-|---|---|
-| 🎯 Vehicle Detection | HC-SR04 ultrasonic sensor detects approaching vehicles within a configurable threshold range |
-| 🔄 Auto Gate Control | Servo motor rotates to open (90°) or close (0°) the gate based on detection |
-| 🟢 Green LED | Illuminates when vehicle is detected and gate is open — safe to proceed |
-| 🔴 Red LED | Illuminates when no vehicle is present and gate is closed — access restricted |
-| ⏱️ Timed Gate Operation | Gate stays open for a set duration, then automatically closes |
-| 🔁 Continuous Loop | System runs in a real-time polling loop — no manual resets needed |
+<div align="center">
 
----
+[![Arduino Uno](https://img.shields.io/badge/Arduino_Uno-ATmega328P-00979D?style=flat-square&logo=arduino&logoColor=white)](https://www.arduino.cc/)
+[![HC-SR04](https://img.shields.io/badge/Sensor-HC--SR04_Ultrasonic-0077B6?style=flat-square)](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)
+[![SG90](https://img.shields.io/badge/Actuator-SG90_Servo_Motor-FF6F00?style=flat-square)](https://components101.com/motors/servo-motor-basics-pinout-datasheet)
+[![LED](https://img.shields.io/badge/Output-LED_Indicators_(R%2FG)-FF0000?style=flat-square)](https://en.wikipedia.org/wiki/Light-emitting_diode)
+[![C++](https://img.shields.io/badge/Code-Arduino_C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white)](https://isocpp.org/)
+[![Breadboard](https://img.shields.io/badge/Prototype-Breadboard_Circuit-6C757D?style=flat-square)](https://en.wikipedia.org/wiki/Breadboard)
 
-## 🧩 System Architecture
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                   ARDUINO UNO (Brain)                   │
-│                                                         │
-│  ┌─────────────┐    ┌──────────────┐   ┌─────────────┐ │
-│  │  Ultrasonic │    │ Servo Motor  │   │  LED Module │ │
-│  │   Sensor    │───▶│  (Gate Ctrl) │   │ (R/G Signal)│ │
-│  │  HC-SR04    │    │    SG90      │   │             │ │
-│  └──────┬──────┘    └──────┬───────┘   └──────┬──────┘ │
-│         │                  │                   │        │
-│    [TRIG / ECHO]      [PWM Signal]        [Digital I/O] │
-│         │                  │                   │        │
-│         └──────────────────▼───────────────────▘        │
-│                      Arduino GPIO                       │
-└─────────────────────────────────────────────────────────┘
-
-Detection Flow:
-  Vehicle Detected → Gate Opens → Green LED ON → Wait → Gate Closes → Red LED ON
-```
+</div>
 
 ---
 
 ## ⚙️ How It Works
 
 ```
-Step 1 ──▶ Ultrasonic sensor emits a sound pulse every loop cycle
-
-Step 2 ──▶ Pulse reflects off vehicle surface and returns to sensor
-
-Step 3 ──▶ Arduino calculates distance using travel time of sound
-
-Step 4 ──▶ If distance < threshold (e.g., 15 cm):
-            └──▶ Servo rotates to 90° (gate OPENS)
-            └──▶ Green LED turns ON
-            └──▶ Red LED turns OFF
-
-Step 5 ──▶ Gate remains open for a defined delay period
-
-Step 6 ──▶ Servo rotates back to 0° (gate CLOSES)
-            └──▶ Green LED turns OFF
-            └──▶ Red LED turns ON
-
-Step 7 ──▶ System returns to Step 1 — continuous polling
+┌─────────────────────────────────────────────────────────────────┐
+│                        SYSTEM FLOW                              │
+│                                                                 │
+│   [START] ──▶ Ultrasonic Pulse Emitted                          │
+│                        │                                        │
+│                        ▼                                        │
+│            Echo Received by HC-SR04                             │
+│                        │                                        │
+│                        ▼                                        │
+│         Arduino Calculates Distance (cm)                        │
+│                        │                                        │
+│             ┌──────────┴──────────┐                             │
+│             ▼                     ▼                             │
+│      Distance < 15cm        Distance ≥ 15cm                     │
+│             │                     │                             │
+│             ▼                     ▼                             │
+│      GATE OPENS (90°)       GATE STAYS CLOSED (0°)              │
+│      Green LED ON           Red LED ON                          │
+│             │                                                   │
+│             ▼                                                   │
+│      Wait 3 seconds                                             │
+│             │                                                   │
+│             ▼                                                   │
+│      GATE CLOSES (0°) ──▶ Red LED ON ──▶ [LOOP]                 │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🧰 Components Used
-
-| Component | Model | Purpose |
-|---|---|---|
-| Microcontroller | Arduino Uno (ATmega328P) | Central processing & control logic |
-| Ultrasonic Sensor | HC-SR04 | Vehicle proximity detection |
-| Servo Motor | SG90 (180°) | Physical gate actuation |
-| LED (Green) | 5mm Standard | Visual signal — gate open / vehicle detected |
-| LED (Red) | 5mm Standard | Visual signal — gate closed / no vehicle |
-| Resistors | 220Ω | Current limiting for LEDs |
-| Power Supply | USB / 5V DC | System power |
-| Breadboard + Jumpers | — | Prototyping & connections |
-
----
-
-## 🔌 Circuit Overview
+## 🔌 Circuit Connections
 
 ```
-HC-SR04 Ultrasonic Sensor:
-  VCC   ──▶  5V
-  GND   ──▶  GND
-  TRIG  ──▶  Digital Pin 9
-  ECHO  ──▶  Digital Pin 10
+HC-SR04 Ultrasonic Sensor          Arduino Uno
+──────────────────────────         ───────────
+VCC          ─────────────────▶    5V
+GND          ─────────────────▶    GND
+TRIG         ─────────────────▶    Digital Pin 9
+ECHO         ─────────────────▶    Digital Pin 10
 
-SG90 Servo Motor:
-  VCC   ──▶  5V
-  GND   ──▶  GND
-  SIG   ──▶  Digital Pin 6 (PWM)
+SG90 Servo Motor                   Arduino Uno
+────────────────                   ───────────
+VCC (Red)    ─────────────────▶    5V
+GND (Brown)  ─────────────────▶    GND
+SIG (Orange) ─────────────────▶    Digital Pin 6 (PWM)
 
-Green LED:
-  Anode (+)  ──▶  220Ω Resistor ──▶  Digital Pin 4
-  Cathode (−)──▶  GND
+Green LED                          Arduino Uno
+─────────                          ───────────
+Anode (+)  ──▶ 220Ω ─────────▶    Digital Pin 4
+Cathode (−)  ─────────────────▶    GND
 
-Red LED:
-  Anode (+)  ──▶  220Ω Resistor ──▶  Digital Pin 3
-  Cathode (−)──▶  GND
+Red LED                            Arduino Uno
+───────                            ───────────
+Anode (+)  ──▶ 220Ω ─────────▶    Digital Pin 3
+Cathode (−)  ─────────────────▶    GND
 ```
 
 ---
 
-## 🖥️ Code Structure
+## 📂 Code Structure
 
 ```cpp
-// ── Automatic Toll Gate System ──────────────────────────
-// Author  : [Your Name]
-// Platform: Arduino Uno
-// Language: C++ (Arduino Framework)
-// ────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════
+//  Automatic Toll Gate System
+//  Platform : Arduino Uno (ATmega328P)
+//  Language : C++ (Arduino Framework)
+// ═══════════════════════════════════════════════════════
 
 #include <Servo.h>
 
-// Pin Definitions
-#define TRIG_PIN    9
-#define ECHO_PIN    10
-#define SERVO_PIN   6
-#define GREEN_LED   4
-#define RED_LED     3
+// ── Pin Configuration ───────────────────────────────────
+#define TRIG_PIN            9
+#define ECHO_PIN            10
+#define SERVO_PIN           6
+#define GREEN_LED           4
+#define RED_LED             3
 
-// Configuration
-#define DETECT_THRESHOLD_CM  15
-#define GATE_OPEN_DELAY_MS   3000
+// ── System Parameters ───────────────────────────────────
+#define DETECT_THRESHOLD_CM 15
+#define GATE_OPEN_DELAY_MS  3000
 
 Servo gateServo;
 
+// ── Setup ────────────────────────────────────────────────
 void setup() {
   pinMode(TRIG_PIN, OUTPUT);
   pinMode(ECHO_PIN, INPUT);
   pinMode(GREEN_LED, OUTPUT);
   pinMode(RED_LED, OUTPUT);
   gateServo.attach(SERVO_PIN);
-  gateServo.write(0);         // Gate closed on boot
+  gateServo.write(0);
   digitalWrite(RED_LED, HIGH);
   Serial.begin(9600);
 }
 
+// ── Distance Measurement ─────────────────────────────────
 long measureDistance() {
+  digitalWrite(TRIG_PIN, LOW);  delayMicroseconds(2);
+  digitalWrite(TRIG_PIN, HIGH); delayMicroseconds(10);
   digitalWrite(TRIG_PIN, LOW);
-  delayMicroseconds(2);
-  digitalWrite(TRIG_PIN, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(TRIG_PIN, LOW);
-  long duration = pulseIn(ECHO_PIN, HIGH);
-  return duration * 0.034 / 2;
+  return pulseIn(ECHO_PIN, HIGH) * 0.034 / 2;
 }
 
-void openGate() {
+// ── Gate Control ─────────────────────────────────────────
+void openGate()  {
   gateServo.write(90);
   digitalWrite(GREEN_LED, HIGH);
   digitalWrite(RED_LED, LOW);
@@ -217,11 +206,11 @@ void closeGate() {
   digitalWrite(RED_LED, HIGH);
 }
 
+// ── Main Loop ─────────────────────────────────────────────
 void loop() {
-  long distance = measureDistance();
-  Serial.print("Distance: "); Serial.print(distance); Serial.println(" cm");
-
-  if (distance > 0 && distance < DETECT_THRESHOLD_CM) {
+  long dist = measureDistance();
+  Serial.print("Distance: "); Serial.print(dist); Serial.println(" cm");
+  if (dist > 0 && dist < DETECT_THRESHOLD_CM) {
     openGate();
     delay(GATE_OPEN_DELAY_MS);
     closeGate();
@@ -232,68 +221,72 @@ void loop() {
 
 ---
 
-## 📸 Project Images
+## 🧩 Components
 
-> 📷 *Hardware prototype images — add your own below*
-
-| View | Description |
-|---|---|
-| ![Hardware Setup](https://via.placeholder.com/400x250?text=Hardware+Setup) | Full breadboard circuit with Arduino, sensor, and servo |
-| ![Gate Open State](https://via.placeholder.com/400x250?text=Gate+Open+State) | Servo at 90° — Green LED active, vehicle detected |
-| ![Gate Closed State](https://via.placeholder.com/400x250?text=Gate+Closed+State) | Servo at 0° — Red LED active, gate closed |
+| Component | Model | Role |
+|---|---|---|
+| Microcontroller | Arduino Uno (ATmega328P) | Core logic & GPIO control |
+| Ultrasonic Sensor | HC-SR04 | Vehicle proximity detection |
+| Servo Motor | SG90 (0–180°) | Gate open/close actuation |
+| Green LED | 5mm Standard | Gate-open visual indicator |
+| Red LED | 5mm Standard | Gate-closed visual indicator |
+| Resistors | 220Ω × 2 | LED current limiting |
+| Breadboard + Jumpers | Standard | Prototyping & wiring |
+| Power Source | USB / 5V DC | System power supply |
 
 ---
 
 ## 🎥 Demo / Preview
 
-> 🔗 **[Watch the Live Demo on LinkedIn »](https://www.linkedin.com/)**
+<div align="center">
 
-The demo showcases:
-- Real-time vehicle detection with the ultrasonic sensor
-- Servo gate actuation in response to proximity events
-- LED indicator transitions between states
-- Full auto-close behavior after gate open duration expires
+**▶ [Watch the Project Demo on LinkedIn](https://www.linkedin.com/)**
+
+</div>
+
+The demo video covers:
+- Live vehicle detection using the ultrasonic sensor
+- Real-time servo gate actuation (open → wait → close)
+- LED state transitions synchronized with gate position
+- Serial monitor output showing live distance readings
 
 ---
 
 ## 📚 Learning Outcomes
 
-By building this project, the following engineering skills were developed and reinforced:
-
-- **Sensor Integration** — Interfacing and reading distance data from the HC-SR04 ultrasonic sensor
-- **Actuator Control** — Driving a servo motor with precise angular control using PWM signals
-- **Embedded C++ Programming** — Writing clean, structured Arduino sketches using functions and constants
-- **Digital I/O Management** — Controlling LEDs and reading sensor states via GPIO pins
-- **System Timing** — Implementing non-blocking-friendly delays and timed gate behavior
-- **Hardware Prototyping** — Designing, wiring, and debugging a multi-component embedded circuit
-- **Real-World Problem Solving** — Translating an infrastructure automation challenge into a working hardware solution
+- **Sensor Integration** — Reading and interpreting HC-SR04 ultrasonic data via digital GPIO
+- **Actuator Control** — PWM-based servo motor angular positioning
+- **Embedded C++** — Clean, modular Arduino programming with `#define` constants and function separation
+- **Circuit Design** — Designing and wiring a multi-component embedded prototype
+- **System Timing** — Implementing reliable delay-based gate sequencing
+- **Hardware Debugging** — Using `Serial.print()` for real-time diagnostics
 
 ---
 
-## 📈 Future Scope
+## 🔮 Future Scope
 
-This project can be significantly expanded with the following enhancements:
-
-- [ ] **RFID / NFC Integration** — Identify registered vehicles and automate toll deduction
-- [ ] **IoT Dashboard** — Send real-time vehicle counts and gate logs to a web dashboard via ESP8266/ESP32
-- [ ] **LCD Display** — Show vehicle count, gate status, and balance info on-site
-- [ ] **IR Sensor Redundancy** — Add secondary IR sensors for improved detection reliability
-- [ ] **Camera Module** — Capture vehicle images at gate entry for logging and security
-- [ ] **Mobile Alert System** — Push notifications to toll operators for anomalies or system faults
-- [ ] **PCB Design** — Move from breadboard prototype to a custom-designed PCB for production use
-- [ ] **Solar Power Integration** — Make the system energy-independent for rural deployment
+- [ ] **RFID / NFC** — Identify vehicles, automate toll deduction, reject unauthorized entries
+- [ ] **IoT Integration** — Stream gate events to a cloud dashboard via ESP8266 / ESP32
+- [ ] **LCD Display** — On-site status display showing vehicle count and gate state
+- [ ] **IR Redundancy** — Add IR sensors for multi-point vehicle confirmation
+- [ ] **Camera Module** — Log vehicle entry images for audit and security
+- [ ] **PCB Design** — Convert the breadboard prototype to a production-grade custom PCB
+- [ ] **Solar Power** — Enable off-grid deployment for rural toll infrastructure
+- [ ] **Mobile Alerts** — Push system fault notifications to an operator app
 
 ---
 
-## 📬 Connect
+## 👨‍💻 Developer
 
 <div align="center">
 
-If you found this project useful, insightful, or inspiring — let's connect!
+**Built with precision, curiosity, and a love for embedded systems.**
+
+<br/>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
-[![Email](https://img.shields.io/badge/Email-Reach%20Out-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your@email.com)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your@email.com)
 
 </div>
 
@@ -301,11 +294,10 @@ If you found this project useful, insightful, or inspiring — let's connect!
 
 <div align="center">
 
-**⭐ If this project helped you, consider giving it a star — it keeps the momentum going!**
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:92FE9D,100:00C9FF&height=100&section=footer" width="100%"/>
 
-*Built with curiosity, circuits, and a lot of `Serial.println()` debugging.*
+**⭐ Star this repo if it sparked something — it means the world!**
 
-[![Made with Arduino](https://img.shields.io/badge/Made%20with-Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)](https://www.arduino.cc/)
-[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen?style=flat-square)](https://github.com/)
+*`while(alive) { learn(); build(); repeat(); }`*
 
 </div>
