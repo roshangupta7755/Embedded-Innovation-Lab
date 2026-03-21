@@ -2,7 +2,7 @@
 
 An Arduino-based **Automatic Toll Gate System** that detects vehicles using an ultrasonic sensor and automatically opens/closes the gate using a servo motor with LED status indicators.
 
----  
+---
 
 ## 🧾 Tech Stack
 
@@ -28,6 +28,13 @@ The system:
 This is a low-cost academic prototype demonstrating transportation automation concepts.
 
 ⚠️ Educational project (not a commercial toll system).
+
+---
+
+## 🎥 Project Demo
+
+📹 Watch the working demo on LinkedIn:  
+👉 https://www.linkedin.com/posts/roshan-gupta-rg7755_embeddedsystems-arduino-automation-ugcPost-7441113272117874688-mzUh
 
 ---
 
@@ -62,17 +69,15 @@ This is a low-cost academic prototype demonstrating transportation automation co
 
 ## ⚙️ Working Principle
 
-1. Ultrasonic sensor continuously measures distance.
-2. When a vehicle is detected within a predefined range:
-   - Servo motor rotates to open the gate.
-   - 🟢 Green LED turns ON (Gate Open).
-   - 🔴 Red LED turns OFF.
-3. After a delay:
-   - Servo returns to closed position.
-   - 🔴 Red LED turns ON (Gate Closed).
-   - 🟢 Green LED turns OFF.
-
-This simulates an automated toll entry/exit system.
+1. Ultrasonic sensor continuously measures distance.  
+2. When a vehicle is detected:  
+   - 🟢 Green LED ON (Gate Open)  
+   - 🔴 Red LED OFF  
+   - Servo opens gate  
+3. After delay:  
+   - 🔴 Red LED ON (Gate Closed)  
+   - 🟢 Green LED OFF  
+   - Servo closes gate  
 
 ---
 
@@ -114,26 +119,16 @@ Automatic Toll Gate System/
 ✔ Servo-controlled gate mechanism  
 ✔ LED-based status indication  
 ✔ Simple and low-cost design  
-✔ Expandable for RFID or IoT integration  
+✔ Expandable for RFID or IoT  
 
 ---
 
 ## 🔮 Future Enhancements
 
-- Add RFID vehicle identification  
-- Add toll amount display  
-- Add IoT-based logging system  
-- Add payment gateway simulation  
-- Add LCD display support  
-
----
-
-## 🎯 Applications
-
-- Highway Toll Systems  
-- Parking Gate Automation  
-- Smart City Projects  
-- Embedded Systems Demonstration  
+- RFID Integration  
+- IoT Monitoring  
+- Payment System  
+- Smart Toll Analytics  
 
 ---
 
@@ -141,7 +136,7 @@ Automatic Toll Gate System/
 
 **Roshan Gupta**  
 Embedded-Innovation-Lab  
-Bachelor of Computer Applications (BCA)
+BCA Student  
 
 ---
 
@@ -153,8 +148,6 @@ https://www.linkedin.com/in/roshan-gupta-rg7755
 ---
 
 ## ⭐ Support
-
-If you found this project useful:
 
 ⭐ Star the repository  
 🍴 Fork it  
