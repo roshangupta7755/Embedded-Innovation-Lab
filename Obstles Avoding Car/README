@@ -1,0 +1,145 @@
+# 🚗 Obstacle Avoiding Car (Tinkercad Simulation)
+
+An Arduino-based **Obstacle Avoiding Car** simulation built using Tinkercad that detects obstacles using an ultrasonic sensor and automatically changes direction to avoid collisions.
+
+---
+
+## 🧾 Tech Stack
+
+![Arduino](https://img.shields.io/badge/Arduino-Uno-00979D?style=for-the-badge&logo=arduino)
+![Language](https://img.shields.io/badge/Language-C++-00599C?style=for-the-badge&logo=c%2B%2B)
+![Simulation](https://img.shields.io/badge/Platform-Tinkercad-orange?style=for-the-badge)
+![Driver](https://img.shields.io/badge/Motor%20Driver-L293D-blue?style=for-the-badge)
+
+---
+
+## 📍 Project Overview
+
+This project simulates a **self-driving obstacle avoiding robot car** using Arduino in Tinkercad.
+
+The system uses an ultrasonic sensor to detect obstacles in front of the vehicle and automatically controls motor direction to avoid collisions.
+
+⚠️ This is a **simulation-based project** (no physical hardware used).
+
+---
+
+## 🎥 Project Demo
+
+📹 Watch the working simulation video:  
+👉 *(Add your video link here)*
+
+---
+
+## 🧠 How It Works
+
+1. Ultrasonic sensor measures distance continuously  
+2. If no obstacle → Car moves forward  
+3. If obstacle detected → Car stops  
+4. Car changes direction (left/right)  
+5. Moves forward again  
+
+---
+
+## 🧰 Components Used (Simulation)
+
+| Component | Description |
+|----------|------------|
+| Arduino UNO | Main controller |
+| Ultrasonic Sensor (HC-SR04) | Distance measurement |
+| L293D Motor Driver | Motor control |
+| DC Motors | Movement control |
+| Battery (9V) | Power supply |
+
+---
+
+## 🔌 Circuit Design
+
+![Circuit Diagram](circuit-diagram.png)
+
+> Designed and simulated using Tinkercad.
+
+---
+
+## 💻 Arduino Logic
+
+```
+If (distance < threshold)
+{
+   Stop Car
+   Turn Left or Right
+}
+Else
+{
+   Move Forward
+}
+```
+
+---
+
+## 📂 Project Structure
+
+```
+Obstacle-Avoiding-Car/
+│
+├── obstacle_car.ino
+├── circuit-diagram.png
+├── simulation-video.mp4
+└── README.md
+```
+
+---
+
+## 🚀 Key Features
+
+✔ Automatic obstacle detection  
+✔ Self-navigation logic  
+✔ Simulation-based testing  
+✔ No hardware required  
+✔ Beginner-friendly project  
+
+---
+
+## 🔮 Future Enhancements
+
+- Add Bluetooth control  
+- Add IR sensors  
+- Add AI-based navigation  
+- Convert to real hardware model  
+
+---
+
+## 🎯 Applications
+
+- Robotics learning  
+- Autonomous vehicle basics  
+- Embedded systems education  
+- Simulation-based prototyping  
+
+---
+
+## 👨‍💻 Developed By
+
+**Roshan Gupta**  
+Embedded-Innovation-Lab  
+BCA Student  
+
+---
+
+## 🔗 Professional Network
+
+LinkedIn:  
+https://www.linkedin.com/in/roshan-gupta-rg7755
+
+---
+
+## ⭐ Support
+
+⭐ Star the repository  
+🍴 Fork it  
+🔗 Share on LinkedIn  
+
+---
+
+## 📜 License
+
+Open-source for educational and learning purposes.
