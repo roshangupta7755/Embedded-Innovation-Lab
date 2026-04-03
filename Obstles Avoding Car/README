@@ -1,6 +1,17 @@
-# 🚗 Obstacle Avoiding Car (Tinkercad Simulation)
+# 🚗 Obstacle Avoiding Car (Simulation Project)
 
-An Arduino-based **Obstacle Avoiding Car** simulation built using Tinkercad that detects obstacles using an ultrasonic sensor and automatically changes direction to avoid collisions.
+A smart **Obstacle Avoiding Car** built using Arduino logic and simulated in Tinkercad.  
+This project demonstrates basic autonomous navigation using ultrasonic sensing.
+
+---
+
+## 🚀 Highlights
+
+- 🤖 Autonomous obstacle detection  
+- 📡 Real-time distance sensing  
+- 🔄 Automatic direction control  
+- 🧪 Fully simulated (no hardware required)  
+- 🎓 Beginner-friendly robotics project  
 
 ---
 
@@ -9,46 +20,46 @@ An Arduino-based **Obstacle Avoiding Car** simulation built using Tinkercad that
 ![Arduino](https://img.shields.io/badge/Arduino-Uno-00979D?style=for-the-badge&logo=arduino)
 ![Language](https://img.shields.io/badge/Language-C++-00599C?style=for-the-badge&logo=c%2B%2B)
 ![Simulation](https://img.shields.io/badge/Platform-Tinkercad-orange?style=for-the-badge)
-![Driver](https://img.shields.io/badge/Motor%20Driver-L293D-blue?style=for-the-badge)
+![Motor Driver](https://img.shields.io/badge/Driver-L293D-blue?style=for-the-badge)
 
 ---
 
-## 📍 Project Overview
+## 📡 Project Overview
 
-This project simulates a **self-driving obstacle avoiding robot car** using Arduino in Tinkercad.
+This project simulates a self-driving car that can detect obstacles and avoid collisions automatically.
 
-The system uses an ultrasonic sensor to detect obstacles in front of the vehicle and automatically controls motor direction to avoid collisions.
+The system uses an ultrasonic sensor to measure distance and controls motor movement accordingly using Arduino logic.
 
-⚠️ This is a **simulation-based project** (no physical hardware used).
+⚠️ This is a **simulation-based project built in Tinkercad** — no physical hardware required.
 
 ---
 
-## 🎥 Project Demo
+## 🎥 Demo
 
-📹 Watch the working simulation video:  
+📹 Watch the working simulation:  
 👉 *(Add your video link here)*
 
 ---
 
-## 🧠 How It Works
+## ⚙️ Working Principle
 
-1. Ultrasonic sensor measures distance continuously  
-2. If no obstacle → Car moves forward  
+1. Ultrasonic sensor continuously scans for obstacles  
+2. If path is clear → Car moves forward  
 3. If obstacle detected → Car stops  
-4. Car changes direction (left/right)  
-5. Moves forward again  
+4. Direction is changed (left/right)  
+5. Car continues movement  
 
 ---
 
-## 🧰 Components Used (Simulation)
+## 🧩 System Components
 
-| Component | Description |
-|----------|------------|
+| Component | Purpose |
+|----------|--------|
 | Arduino UNO | Main controller |
-| Ultrasonic Sensor (HC-SR04) | Distance measurement |
-| L293D Motor Driver | Motor control |
-| DC Motors | Movement control |
-| Battery (9V) | Power supply |
+| HC-SR04 Sensor | Distance measurement |
+| L293D Driver | Motor control |
+| DC Motors | Movement |
+| Power Supply | System power |
 
 ---
 
@@ -56,21 +67,21 @@ The system uses an ultrasonic sensor to detect obstacles in front of the vehicle
 
 ![Circuit Diagram](circuit-diagram.png)
 
-> Designed and simulated using Tinkercad.
+> Designed and tested using Tinkercad simulation environment.
 
 ---
 
-## 💻 Arduino Logic
+## 💻 Core Logic
 
 ```
-If (distance < threshold)
+if (distance < threshold)
 {
-   Stop Car
-   Turn Left or Right
+   stop();
+   turn();
 }
-Else
+else
 {
-   Move Forward
+   moveForward();
 }
 ```
 
@@ -83,41 +94,31 @@ Obstacle-Avoiding-Car/
 │
 ├── obstacle_car.ino
 ├── circuit-diagram.png
-├── simulation-video.mp4
+├── demo-video.mp4
 └── README.md
 ```
 
 ---
 
-## 🚀 Key Features
-
-✔ Automatic obstacle detection  
-✔ Self-navigation logic  
-✔ Simulation-based testing  
-✔ No hardware required  
-✔ Beginner-friendly project  
-
----
-
-## 🔮 Future Enhancements
-
-- Add Bluetooth control  
-- Add IR sensors  
-- Add AI-based navigation  
-- Convert to real hardware model  
-
----
-
 ## 🎯 Applications
 
-- Robotics learning  
-- Autonomous vehicle basics  
-- Embedded systems education  
-- Simulation-based prototyping  
+- 🤖 Robotics fundamentals  
+- 🚗 Autonomous vehicle basics  
+- 🧪 Simulation-based testing  
+- 🎓 Academic learning  
 
 ---
 
-## 👨‍💻 Developed By
+## 🔮 Future Scope
+
+- Add Bluetooth remote control  
+- Add multiple sensors  
+- Convert to real hardware model  
+- Implement AI-based navigation  
+
+---
+
+## 👨‍💻 Developer
 
 **Roshan Gupta**  
 Embedded-Innovation-Lab  
@@ -125,21 +126,23 @@ BCA Student
 
 ---
 
-## 🔗 Professional Network
+## 📬 Connect With Me
 
-LinkedIn:  
-https://www.linkedin.com/in/roshan-gupta-rg7755
+🔗 LinkedIn:  
+https://www.linkedin.com/in/roshan-gupta-rg7755  
 
 ---
 
 ## ⭐ Support
 
+If you like this project:
+
 ⭐ Star the repository  
 🍴 Fork it  
-🔗 Share on LinkedIn  
+🔗 Share it  
 
 ---
 
 ## 📜 License
 
-Open-source for educational and learning purposes.
+Open-source for educational and innovation purposes.
