@@ -1,4 +1,4 @@
-# 🚗 Obstacle Avoiding Car (Simulation Project)
+[# 🚗 Obstacle Avoiding Car (Simulation Project)
 
 A smart **Obstacle Avoiding Car** built using Arduino logic and simulated in Tinkercad.  
 This project demonstrates basic autonomous navigation using ultrasonic sensing.
@@ -152,3 +152,4 @@ If you like this project:
 ## 📜 License
 
 Open-source for educational and innovation purposes.
+](https://www.linkedin.com/posts/roshan-gupta-rg7755_arduino-embeddedsystems-robotics-ugcPost-7445756916653359104-aAEa?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSTLGoBefXLOdG1ZbrDcoOkyX6_4DuubQ4)
