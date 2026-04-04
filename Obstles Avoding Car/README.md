@@ -1,4 +1,4 @@
-[# 🚗 Obstacle Avoiding Car (Simulation Project)
+# 🚗 Obstacle Avoiding Car (Simulation Project)
 
 A smart **Obstacle Avoiding Car** built using Arduino logic and simulated in Tinkercad.  
 This project demonstrates basic autonomous navigation using ultrasonic sensing.
@@ -37,7 +37,7 @@ The system uses an ultrasonic sensor to measure distance and controls motor move
 ## 🎥 Demo
 
 📹 Watch the working simulation:  
-👉 *(Add your video link here)*
+👉 https://www.linkedin.com/posts/roshan-gupta-rg7755_arduino-embeddedsystems-robotics-ugcPost-7445756916653359104-aAEa
 
 ---
 
@@ -46,8 +46,9 @@ The system uses an ultrasonic sensor to measure distance and controls motor move
 1. Ultrasonic sensor continuously scans for obstacles  
 2. If path is clear → Car moves forward  
 3. If obstacle detected → Car stops  
-4. Direction is changed (left/right)  
-5. Car continues movement  
+4. Car moves backward  
+5. Turns right  
+6. Continues forward  
 
 ---
 
@@ -63,18 +64,17 @@ The system uses an ultrasonic sensor to measure distance and controls motor move
 
 ---
 
-
-
 ## 🧠 System Behavior
 
 The car operates based on real-time distance sensing and decision-making logic.
 
 - 🚗 Moves forward when no obstacle is detected  
 - 🛑 Stops immediately when an obstacle is detected  
-- 🔄 Changes direction automatically to avoid collision  
-- 🔁 Continuously repeats the process for smooth navigation  
+- 🔙 Moves backward  
+- ↪ Turns right automatically  
+- 🔁 Repeats the process continuously  
 
-This creates a simple yet effective autonomous navigation system.
+This creates a simple and effective autonomous navigation system.
 
 ---
 
@@ -83,13 +83,10 @@ This creates a simple yet effective autonomous navigation system.
 This project is fully designed and tested using **Tinkercad simulation environment**.
 
 - No physical hardware required  
-- Real-time testing through simulation  
-- Easy to modify and experiment with logic  
+- Real-time simulation testing  
+- Easy to modify and experiment  
 
 > Ideal for beginners learning robotics and embedded systems.
-
----
-```
 
 ---
 
@@ -110,16 +107,16 @@ Obstacle-Avoiding-Car/
 
 - 🤖 Robotics fundamentals  
 - 🚗 Autonomous vehicle basics  
-- 🧪 Simulation-based testing  
-- 🎓 Academic learning  
+- 🧪 Simulation-based learning  
+- 🎓 Academic projects  
 
 ---
 
 ## 🔮 Future Scope
 
-- Add Bluetooth remote control  
+- Add Bluetooth control  
 - Add multiple sensors  
-- Convert to real hardware model  
+- Convert to real hardware  
 - Implement AI-based navigation  
 
 ---
@@ -152,4 +149,3 @@ If you like this project:
 ## 📜 License
 
 Open-source for educational and innovation purposes.
-](https://www.linkedin.com/posts/roshan-gupta-rg7755_arduino-embeddedsystems-robotics-ugcPost-7445756916653359104-aAEa?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSTLGoBefXLOdG1ZbrDcoOkyX6_4DuubQ4)
